@@ -21,10 +21,41 @@
 <body>
 
     <div id="app">
+        <header>
+            <div class="header-container">
+                <img src="https://m.media-amazon.com/images/I/51rttY7a+9L.png" alt="">
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="row row-cols-4 justify-content-between align-items-center gap-5 rounded mt-5">
+                    <div v-for="(disc, index) in dischi" :key="index" class="col text-center text-white" @click="showDetails(disc)">
+                        <img :src="disc.poster" alt="immagine poster" class="mb-3">
+                        <h5>{{ disc.title }}</h5>
+                        <p>{{ disc.author }}</p>
+                        <span>{{ disc.year }}</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CLICK SUL BOTTONE -->
+            <div class="banner-container text-white d-flex justify-content-center align-items-center rounded" v-if="selectedDisc">
+                <div class="banner text-center">
+                    <img :src="selectedDisc.poster" alt="immagine poster" class="mb-3">
+                    <h5>{{ selectedDisc.title }}</h5>
+                    <p>{{ selectedDisc.author }}</p>
+                    <span>{{ selectedDisc.year }}</span>
+                </div>
+                <button type="button" class="btn-close border border-dark p-2" aria-label="Close" @click="hideDetails"></button>
+            </div>
+        </main>
 
     </div>
+    </div>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

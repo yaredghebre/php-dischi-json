@@ -1,0 +1,62 @@
+/* Colori */
+:root {
+ --primary-color: #1C2D3C;
+ --secondary-color: #06131F;
+ --third-color: #102030;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+header {
+    background-color: var(--secondary-color);
+    height: 100px;
+}
+
+img {
+    max-height: 100%;
+}
+
+.header-container {
+    padding: 20px;
+    height: 100px;
+}
+
+.col {
+    background-color: var(--third-color);
+    padding: 20px;
+    transition: .3s ease-in-out;
+}
+
+.col img{
+    height: 200px;
+}
+
+.col:hover {
+    scale: 1.1;
+    border: 1px solid green;
+    transition: .3s ease-in-out;
+}
+
+.banner-container {
+    width: 80%;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: var(--third-color);
+    position: relative;
+    top: -800px;
+    left: 0;
+    opacity: .95;
+}
+
+.banner img{
+    height: 500px;
+}
+
+.btn-close {
+    background-color: white;
+    position: relative;
+    left: 30%;
+    top: -45%;
+}
